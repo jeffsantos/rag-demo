@@ -3,13 +3,8 @@ import pandas as pd
 import streamlit as st
 from sentence_transformers import SentenceTransformer
 
-
 def connect_db():
-    connection_string = (
-        "postgresql://db-ebape_owner:TAL8FBZH1iCp@"
-        "ep-blue-dust-a59whnj4.us-east-2.aws.neon.tech/db-ebape?"
-        "sslmode=require&options=endpoint%3Dep-blue-dust-a59whnj4"
-    )
+    connection_string = "postgresql://neondb_owner:npg_R1GOJ5swvhkE@ep-bitter-grass-axbh6xhc-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
     engine = create_engine(connection_string)
     return engine.connect()
 
